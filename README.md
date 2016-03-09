@@ -18,11 +18,9 @@ Put gitmc.sh in a folder up one level to your projects
 
 #### Commit, Pull and push in a row
 - ./gitmc.sh -b <branch> -m "message" -pull -push -path <path>
-- 
 
 ##### By default
 - ./gitmc.sh = ./gitmc.sh -b master -m "$(git status -s)" -pull -push -path .
-- 
 
 ##### Options
 Ex: ./mgit.sh -b <branch> -pull -push -m "<message> -path <path>"
