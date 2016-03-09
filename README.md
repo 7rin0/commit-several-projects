@@ -10,36 +10,36 @@ It's time to commit every project with the same message, pull, push and let's gi
 ## Usage
 git clone https://github.com/7rin0/gitmc.git or simply get the script and place in a folder up one level to your projects. Lets say:
 .
-|-- gitmc.sh
-|-- README.md
-|-- .gitignore
-|-- project_a
-|   |-- folder_one
-|   |--  |-- file.z
-|   |-- folder_two
-|   |--  |-- one.x
+|-- gitmc.sh 
+|-- README.md 
+|-- .gitignore 
+|-- project_a 
+|   |-- folder_one 
+|   |--  |-- file.z 
+|   |-- folder_two 
+|   |--  |-- one.x 
+|   |--  |-- two.y 
+|   |--  |-- three.z 
+|   |-- folder_three 
+|   |--  |-- fromage.baguette 
+|-- project_b 
+|   |-- folder_one 
+|   |--  |-- file.z 
+|   |-- folder_two 
+|   |--  |-- one.x 
+|   |--  |-- two.y 
+|   |--  |-- three.z 
+|   |-- folder_three 
+|   |--  |-- fromage.baguette 
+|-- project_c 
+|   |-- folder_one 
+|   |--  |-- file.z 
+|   |-- folder_two 
+|   |--  |-- one.x 
 |   |--  |-- two.y
-|   |--  |-- three.z
-|   |-- folder_three
-|   |--  |-- fromage.baguette
-|-- project_b
-|   |-- folder_one
-|   |--  |-- file.z
-|   |-- folder_two
-|   |--  |-- one.x
-|   |--  |-- two.y
-|   |--  |-- three.z
-|   |-- folder_three
-|   |--  |-- fromage.baguette
-|-- project_c
-|   |-- folder_one
-|   |--  |-- file.z
-|   |-- folder_two
-|   |--  |-- one.x
-|   |--  |-- two.y
-|   |--  |-- three.z
-|   |-- folder_three
-|   |--  |-- fromage.baguette
+|   |--  |-- three.z 
+|   |-- folder_three 
+|   |--  |-- fromage.baguette 
 
 ## Commit, Pull and push in a row
 ./gitmc.sh -b <branch> -m "message" -pull -push -path <path>
