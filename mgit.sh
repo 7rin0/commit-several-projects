@@ -21,34 +21,55 @@ mgit()
   push=false 
   branch="master"
   path="."
+  message=$(git status -s)
 
-paste=vpaste	# default is vertical pasting
-seplist="\t"	# default separator is tab
-
-  set -- $(getopt -b $0 d:s "$@")
-  for o
-  do	case "$o" in
-	-b)	shift; echo $1; shift;;
-	-path)	echo $1; shift;;
-	esac
+  # Get options
+  local OPTIND
+  while getopts :b:p:m: FLAG; do
+    case $FLAG in
+      b)  #set branch
+        branch=$OPTARG
+        ;;
+      p)  #set option "pull, push or path"
+        if [ $OPTARG == "ull" ]
+	then
+		pull=$OPTARG
+        elif [ $OPTARG == "ush" ]
+        then
+                push=$OPTARG
+	elif [ $OPTARG == "ath" ]
+        then
+                path=$OPTARG
+	fi
+	;;
+      m) # set message
+	if [ ! -z $OPTARGS]
+	then
+		message=$OPTARGS
+		echo $message
+	fi
+	;;
+    esac
   done
 
-  exit 1;
   for dir in $directories
   do
     cd $dir
-    git pull origin
-    git commit -am"$1"
-    git push origin
+    if [ ! -z "$pull"  ] || [ ! -z "$push" ] ; then
+        git pull origin "$branch"
+    fi
+    git commit -am"$message"
+    if [ ! -z "$push" ] ; then
+        git push origin "$branch"
+    fi
     cd ../
-    echo $currwordir/$dir;
   done
 }
 
 # Loop through every one and set same message commit
 if [ "$#" -ge 1 ]
 then
-  mgit
+  mgit "$@"
 else
   help
 fi
