@@ -11,11 +11,11 @@ It's time to commit every project with the same message, pull, push and let's gi
 git clone https://github.com/7rin0/gitmc.git or simply get the script and place in a folder up one level to your projects. Lets say:
 .
 
-|-- gitmc.sh 
+|-- gitmc.sh
 
-|-- README.md 
+|-- README.md
 
-|-- .gitignore 
+|-- .gitignore
 
 |-- project_a 
 
