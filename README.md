@@ -12,13 +12,9 @@ git clone https://github.com/7rin0/gitmc.git or simply get the script and place 
 .
 
 |-- gitmc.sh
-
 |-- README.md
-
 |-- .gitignore
-
-|-- project_a 
-
+|-- project_a
 |   |-- folder_one 
 
 |   |--  |-- file.z 
