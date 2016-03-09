@@ -9,7 +9,7 @@ It's time to commit every project with the same message, pull, push and let's gi
 
 ### Usage
 git clone https://github.com/7rin0/gitmc.git or simply get the script and place in a folder up one level to your projects. Lets say:
-![alt tag](https://github.com/7rin0/gitmc/raw/master/unpacked/examples/project_a/three.png)
+![alt tag](https://raw.githubusercontent.com/7rin0/gitmc/master/examples/project_a/three.png)
 
 ### Commit, Pull and push in a row
 ./gitmc.sh -b <branch> -m "message" -pull -push -path <path>
@@ -19,11 +19,17 @@ git clone https://github.com/7rin0/gitmc.git or simply get the script and place 
 
 #### Options
 Ex: ./mgit.sh -b <branch> -pull -push -m "<message> -path <path>"
+
 -b <branch> (target repository branch) >>> default: master
+
 -pull (Fetch from and integrate with your local branch before commit) 
+
 -push (Update remote refs along with associated objects after commit) 
+
 -m "<your message>" (Define a commit message) 
+
 -path <relative_path> (Enter absolute paths or relative paths) >>> default: .
+
 
 ### Voilà
 More instructions and options comming soon
