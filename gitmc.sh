@@ -16,11 +16,10 @@ help()
 gitmc()
 {
   directories=$(ls -d */)
-  currwordir=$(pwd)
   pull=false
-  push=false 
+  push=false
   branch="master"
-  path="."
+  relative_path="."
   message=$(git status -s)
 
   # Get options
@@ -39,11 +38,11 @@ gitmc()
                 push=$OPTARG
 	elif [ $OPTARG == "ath" ]
         then
-                path=$OPTARG
+                relative_path=$OPTARG
 	fi
 	;;
       m) # set message
-	if [ ! -z $OPTARGS]
+	if [ ! -z $OPTARGS ]
 	then
 		message=$OPTARGS
 		echo $message
@@ -51,6 +50,8 @@ gitmc()
 	;;
     esac
   done
+
+  echo $relative_path
 
   for dir in $directories
   do
